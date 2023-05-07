@@ -1,20 +1,20 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import { Clockcomp } from "../components/clock";
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Welcome to Astro.">
-	<main>
-		<div id="header" class="text-center text-lg">
-			<h1>idel clock</h1>
-		</div>
-	</main>
+  <main>
+    <div id="header" class="text-center text-lg">
+      <!-- <h1>idel clock</h1> -->
+      <Clockcomp client:load />
+    </div>
+  </main>
 </Layout>
 
 <style lang="scss">
-#header {
-	margin-top: 3%;
-	font-size: 48px;
-	
-}
+  #header {
+    margin-top: 3%;
+    font-size: 48px;
+  }
 </style>
-
